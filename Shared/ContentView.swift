@@ -104,10 +104,15 @@ struct ContentView: View {
     """
     
     var body: some View {
-        ScrollView([.horizontal, .vertical]) {
-                ForEach(text.components(separatedBy: "\n"), id: \.self) { text in
-                    NSASLabel { label in
-                        label.attributedText = highlighter.highlight(text)
+        let lines = text.components(separatedBy: "\n")
+        return ScrollView([.horizontal, .vertical]) {
+            ForEach(lines.indices, id: \.self) { index in
+                
+                    HStack {
+                        Text("\(index)")
+                        NSASLabel { label in
+                            label.attributedText = highlighter.highlight(lines[index])
+                        }
                     }
                 }
                 .frame(maxWidth: .infinity)
