@@ -17,6 +17,7 @@
 		52C014AA27E505950011AF9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C0148027E505930011AF9F /* ContentView.swift */; };
 		52C014AB27E505950011AF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C0148127E505950011AF9F /* Assets.xcassets */; };
 		52C014AC27E505950011AF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C0148127E505950011AF9F /* Assets.xcassets */; };
+		52C014BD27E505CC0011AF9F /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = 52C014BC27E505CC0011AF9F /* Splash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C014BD27E505CC0011AF9F /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = "TrySplash (iOS)";
+			packageProductDependencies = (
+				52C014BC27E505CC0011AF9F /* Splash */,
+			);
 			productName = "TrySplash (iOS)";
 			productReference = 52C0148627E505950011AF9F /* TrySplash.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 52C0147927E505930011AF9F;
+			packageReferences = (
+				52C014BB27E505CC0011AF9F /* XCRemoteSwiftPackageReference "Splash" */,
+			);
 			productRefGroup = 52C0148727E505950011AF9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -701,6 +709,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52C014BB27E505CC0011AF9F /* XCRemoteSwiftPackageReference "Splash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Splash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52C014BC27E505CC0011AF9F /* Splash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52C014BB27E505CC0011AF9F /* XCRemoteSwiftPackageReference "Splash" */;
+			productName = Splash;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52C0147A27E505930011AF9F /* Project object */;
 }
